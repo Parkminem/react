@@ -14,7 +14,7 @@ const CardEditorForm = ({ card }) => {
       <input className={styles.input} type="text" name="name" value={name} />
       <input
         className={styles.input}
-        type="company"
+        type="text"
         name="company"
         value={company}
       />
@@ -23,8 +23,8 @@ const CardEditorForm = ({ card }) => {
         <option value="Dark">Dark</option>
         <option value="Colorful">Colorful</option>
       </select>
-      <input className={styles.input} type="title" name="title" value={title} />
-      <input className={styles.input} type="email" name="email" value={email} />
+      <input className={styles.input} type="text" name="title" value={title} />
+      <input className={styles.input} type="text" name="email" value={email} />
       <textarea
         className={styles.textarea}
         name="message"

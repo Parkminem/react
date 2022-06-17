@@ -12,7 +12,7 @@ const Maker = ({ authService }) => {
       id: '1',
       name: 'minhyuk',
       company: 'dankook',
-      theme: 'dark',
+      theme: 'Dark',
       title: 'Software Engineer',
       email: 'comon23463@gmail.com',
       message: 'hi',
@@ -23,7 +23,7 @@ const Maker = ({ authService }) => {
       id: '2',
       name: 'minhyuk2',
       company: 'dankook',
-      theme: 'light',
+      theme: 'Light',
       title: 'Software Engineer',
       email: 'comon23463@gmail.com',
       message: 'hi',
@@ -34,7 +34,7 @@ const Maker = ({ authService }) => {
       id: '3',
       name: 'minhyuk3',
       company: 'dankook',
-      theme: 'colorful',
+      theme: 'Colorful',
       title: 'Software Engineer',
       email: 'comon23463@gmail.com',
       message: 'hi',
@@ -55,12 +55,16 @@ const Maker = ({ authService }) => {
       }
     });
   });
+  const addCard = card => {
+    const updated = [...cards, card];
+    setCards(updated);
+  };
 
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} />
+        <Editor cards={cards} addCard={addCard} />
         <Preview cards={cards} />
       </div>
       <Footer />
